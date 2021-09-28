@@ -1,0 +1,33 @@
+<!--
+ * @Desc: 
+ * @Author: leoFan
+ * @Date: 2021-09-09 09:34:34
+ * @LastEditors: leoFan
+ * @LastEditTime: 2021-09-24 09:59:22
+ * @FilePath: /WoolMap-MiniProgram/Users/fanhongyu/code/test/test-canvas.html
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <canvas id="canvas" width="800" height="800"></canvas>
+        <script>
+            const canvas = document.getElementById('canvas');
+            const ctx = canvas.getContext('2d'); // 获取到Canvas对象
+            ctx.fillStyle = 'red'; // 修改填充色为红色
+            ctx.fillRect(0, 0, 50, 50); // 绘制矩形
+
+            ctx.beginPath(); 
+            ctx.lineWidth = 2; // 线条宽度
+            ctx.strokeStyle = 'blue'; // 线条填充色
+            ctx.moveTo(100 ,100); // 起点坐标
+            ctx.lineTo(250, 75) // 中间点坐标
+            ctx.stroke(); // 绘制线段
+            ctx.lineWidth = 1; // 线条宽度
+            ctx.lineTo(300, 100) // 终点坐标
+            ctx.stroke(); // 绘制线段
+        </script>
+    </body>
+</html>
