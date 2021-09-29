@@ -1,11 +1,12 @@
 <!--
  * @Desc: 
  * @Author: leoFan
- * @Date: 2021-09-09 09:34:34
+ * @Date: 2021-09-29 22:37:07
  * @LastEditors: leoFan
- * @LastEditTime: 2021-09-24 09:59:22
- * @FilePath: /WoolMap-MiniProgram/Users/fanhongyu/code/test/test-canvas.html
+ * @LastEditTime: 2021-09-29 23:25:27
+ * @FilePath: \vue_visualization\html\test-canvas.html
 -->
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -28,6 +29,21 @@
             ctx.lineWidth = 1; // 线条宽度
             ctx.lineTo(300, 100) // 终点坐标
             ctx.stroke(); // 绘制线段
+
+            ctx.beginPath(); 
+            ctx.lineWidth = 2;
+            ctx.strokeStyle = 'green';
+            ctx.fillStyle = 'red';
+            ctx.arc(200, 200, 50, 0, 2 * Math.PI); // 绘制圆形
+            ctx.stroke();
+            ctx.fill();
+
+            ctx.beginPath();
+            ctx.lineWidth = 1;
+            ctx.strokeStyle = 'red';
+            ctx.moveTo(300, 300);
+            ctx.lineTo(301, 301); // 绘制一个点
+            ctx.stroke();
         </script>
     </body>
 </html>
